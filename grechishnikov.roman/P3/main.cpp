@@ -8,7 +8,7 @@ int main()
 {
   using namespace grechishnikov;
 
-  char* str = nullptr;
+  const char* str = nullptr;
   try
   {
     str = inputStr(std::cin);
@@ -24,6 +24,11 @@ int main()
     delete[] str;
     std::cerr << e.what() << "\n";
     return 1;
+  }
+  if (str == nullptr)
+  {
+    std::cerr << "String is empty\n";
+    return 2;
   }
   std::cout << countUnique(str) << "\n";
   delete[] str;
