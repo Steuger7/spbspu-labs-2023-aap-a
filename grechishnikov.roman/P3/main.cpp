@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstddef>
 #include <exception>
-#include "inputStr.hpp"
+#include <inputString.hpp>
 #include "countUnique.hpp"
 
 int main()
